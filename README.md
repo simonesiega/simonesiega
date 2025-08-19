@@ -5,22 +5,22 @@
 # Hi, I'm Simone Siega 👋
 
 <p>
-  <a href="mailto:your.email@example.com">
+  <a href="mailto:simonesiega1@gmail.com">
     <img src="https://img.shields.io/badge/Email-%23D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://leetcode.com/yourprofile">
+  <a href="https://leetcode.com/u/simonesiega/">
     <img src="https://img.shields.io/badge/LeetCode-%23FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
   </a>
-  <a href="https://discordapp.com/users/yourdiscordID">
+  <a href="https://discordapp.com/users/697499122655035412">
     <img src="https://img.shields.io/badge/Discord-%235865F2?style=for-the-badge&logo=discord&logoColor=white" />
   </a>
-  <a href="https://instagram.com/yourprofile">
+  <a href="https://www.instagram.com/_simonesiiega_/">
     <img src="https://img.shields.io/badge/Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
   </a>
-  <a href="https://open.spotify.com/user/yourprofile">
+  <a href="https://open.spotify.com/user/31akzugktjkezg6vaubq2ifo7xei?si=82fee5073b5141a1">
     <img src="https://img.shields.io/badge/Spotify-%231DB954?style=for-the-badge&logo=spotify&logoColor=white" />
   </a>
-  <a href="https://youtube.com/yourchannel">
+  <a href="https://www.youtube.com/@simonesiega1">
     <img src="https://img.shields.io/badge/YouTube-%23FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
   </a>
 </p>
@@ -64,10 +64,10 @@ My current goal is to strengthen my understanding of **AI fundamentals** and lea
 If you want to discuss **programming, AI, or game development**, collaborate on projects, or just share ideas, feel free to reach out!  
 
 <p>
-  <a href="mailto:your.email@example.com">
+  <a href="mailto:simonesiega1@gmail.com">
     <img src="https://img.shields.io/badge/Email-%23D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://discordapp.com/users/yourDiscordID">
+  <a href="https://discordapp.com/users/697499122655035412">
     <img src="https://img.shields.io/badge/Discord-%235865F2?style=for-the-badge&logo=discord&logoColor=white" />
   </a>
   <a href="https://github.com/simonesiega">
