@@ -41,11 +41,6 @@
 ---
 
 ## 📊 Languages & Past Work
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=simonesiega&layout=compact&theme=tokyonight" />
-</p>
-
 Most of my work so far has been in **Java (85%)**, where I’ve built projects like  [JavaChess](https://github.com/simonesiega/javaChess), a full-featured chess application, as well as  several game experiments using **LibGDX** and **Swing** for graphics and interactivity.  
 
 Alongside Java, I’ve explored **Rust (15%)**, developing tools such as  [MathSolver](https://github.com/simonesiega/MathSolver), a command-line application that interprets  and evaluates mathematical expressions using a formal grammar and advanced error handling.  
