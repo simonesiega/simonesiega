@@ -39,22 +39,6 @@
   <img src="https://skillicons.dev/icons?i=java,rust,python,javascript,html,css,vue,nodejs,flutter,dart,godot,idea,pycharm,git,github&theme=dark" />
 </p>
 
----
-
-## 📊 Languages & Projects
-- **Java** 🎮  
-  Main experience with Java, building projects like [JavaChess](https://github.com/simonesiega/javaChess) and several experimental games using **LibGDX** and **Swing**. Strong foundation in OOP, game logic, and GUI design.
-
-- **Rust** ⚙️  
-  Explored Rust through projects like [MathSolver](https://github.com/simonesiega/MathSolver), a CLI tool for parsing and evaluating mathematical expressions. Focused on performance, safe coding patterns, and tooling.
-
-- **Python (AI-focused)** 🤖  
-  Worked on **AI-powered projects**, most notably [AICompanion](https://github.com/simonesiega/AIcompanion), experimenting with model integration, data pipelines, and intelligent agents. Gaining hands-on experience with ML workflows and AI system design.
-
-- **Dart & Flutter (learning/in progress)** 📱  
-  Currently developing mobile apps that combine **UI design** and **AI features**.
-
-
 ## 🚀 Current Focus
 
 💡 *Right now, I’m focusing on:*  
