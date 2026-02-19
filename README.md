@@ -29,7 +29,7 @@
 > 🎓 Final-year **Computer Science** student (graduating 2026)  
 > 💻 Experienced in **Java**, **Rust**, **Python**, **JavaScript**, and **web development**  
 > 📱 Currently learning **Dart & Flutter**, building mobile apps (private projects in progress)  
-> 🧠 Passionate about **Artificial Intelligence** → creator of [AICompanion](https://github.com/simonesiega/AIcompanion) and exploring [Generative AI](https://github.com/microsoft/generative-ai-for-beginners) & [AI Agents](https://github.com/microsoft/ai-agents-for-beginners)  
+> 🧠 Passionate about **Artificial Intelligence** → creator of [AICompanion](https://github.com/simone-academics/hs-ai-companion-prototype) and exploring [Generative AI](https://github.com/microsoft/generative-ai-for-beginners) & [AI Agents](https://github.com/microsoft/ai-agents-for-beginners)  
 > 🎮 Interested in **Game Development** (Godot · LibGDX · Java Swing)  
 > 🚀 Lifelong learner, passionate about building, experimenting, and sharing  
 
@@ -46,7 +46,9 @@
 - **Mobile development** → Flutter apps integrating AI features  
 - Strengthening my understanding of **software design, system architecture, and cross-platform development**  
 
----
+## 📚 Academic projects archive:
+All coursework and school/university projects are organized in my dedicated organization:  
+👉 https://github.com/simone-academics
 
 ## 📫 How to Reach Me
 If you want to discuss **programming, AI, or game development**, collaborate on projects, or just share ideas, feel free to reach out!  
