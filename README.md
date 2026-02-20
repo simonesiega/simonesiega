@@ -46,9 +46,10 @@
 - **Mobile development** → Flutter apps integrating AI features  
 - Strengthening my understanding of **software design, system architecture, and cross-platform development**  
 
-## 📚 Academic projects archive:
-All coursework and school/university projects are organized in my dedicated organization:  
-👉 https://github.com/simone-academics
+## 📚 Academic projects Archive
+All coursework and academic projects are organized in my dedicated GitHub organization:
+
+[![Academic Projects](https://img.shields.io/badge/Academic_Projects-Organization-blue?style=for-the-badge&logo=github)](https://github.com/simone-academics)
 
 ## 📫 How to Reach Me
 If you want to discuss **programming, AI, or game development**, collaborate on projects, or just share ideas, feel free to reach out!  
