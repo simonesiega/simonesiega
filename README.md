@@ -3,6 +3,11 @@
 </p>
 
 # Hi, I'm Simone Siega 👋
+<p>
+  <a href="https://simonesiega.com">
+    <img src="https://img.shields.io/badge/🌐%20Portfolio-simonesiega.com-1f6feb?style=for-the-badge" />
+  </a>
+</p>
 
 <p>
   <a href="mailto:simonesiega1@gmail.com">
@@ -36,7 +41,7 @@
 ## 🛠️ Tech Stack & Tools
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,rust,python,javascript,html,css,vue,nodejs,flutter,dart,godot,idea,pycharm,git,github&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=java,rust,python,javascript,html,css,react,vue,nodejs,docker,php,dart,flutter,godot,git&theme=dark" />
 </p>
 
 ## 🚀 Current Focus
