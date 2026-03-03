@@ -1,32 +1,26 @@
+<p align="center"> 
+  <img src="https://capsule-render.vercel.app/api?text=Learning%20by%20Coding&animation=fadeIn&type=waving&color=gradient&height=100"/> 
+</p>
+
+<h1 align="center">Hi, I'm Simone Siega 👋</h1>
+
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?text=Learning%20by%20Coding&animation=fadeIn&type=waving&color=gradient&height=100"/>
+  <strong>AI & Software Developer</strong><br>
+  Building intelligent systems, scalable backend software, and AI-driven applications.
 </p>
 
-# Hi, I'm Simone Siega 👋
-<p>
+<p align="center">
   <a href="https://simonesiega.com">
-    <img src="https://img.shields.io/badge/🌐%20Portfolio-simonesiega.com-1f6feb?style=for-the-badge" />
+    <img src="https://img.shields.io/badge/Portfolio-simonesiega.com-1f6feb?style=for-the-badge" />
   </a>
-</p>
-
-<p>
   <a href="mailto:simonesiega1@gmail.com">
-    <img src="https://img.shields.io/badge/Email-%23D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://discordapp.com/users/697499122655035412"> 
+    <img src="https://img.shields.io/badge/Discord-%235865F2?style=for-the-badge&logo=discord&logoColor=white" /> 
   </a>
   <a href="https://leetcode.com/u/simonesiega/">
-    <img src="https://img.shields.io/badge/LeetCode-%23FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
-  </a>
-  <a href="https://discordapp.com/users/697499122655035412">
-    <img src="https://img.shields.io/badge/Discord-%235865F2?style=for-the-badge&logo=discord&logoColor=white" />
-  </a>
-  <a href="https://www.instagram.com/_simonesiiega_/">
-    <img src="https://img.shields.io/badge/Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
-  </a>
-  <a href="https://open.spotify.com/user/31akzugktjkezg6vaubq2ifo7xei?si=82fee5073b5141a1">
-    <img src="https://img.shields.io/badge/Spotify-%231DB954?style=for-the-badge&logo=spotify&logoColor=white" />
-  </a>
-  <a href="https://www.youtube.com/@simonesiega1">
-    <img src="https://img.shields.io/badge/YouTube-%23FF0000?style=for-the-badge&logo=youtube&logoColor=white" />
+    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" />
   </a>
 </p>
 
@@ -34,39 +28,28 @@
 > 🎓 Final-year **Computer Science** student (graduating 2026)  
 > 💻 Experienced in **Java**, **Rust**, **Python**, **JavaScript**, and **web development**  
 > 📱 Currently learning **Dart & Flutter**, building mobile apps (private projects in progress)  
-> 🧠 Passionate about **Artificial Intelligence** → creator of [AICompanion](https://github.com/simone-academics/hs-ai-companion-prototype) and exploring [Generative AI](https://github.com/microsoft/generative-ai-for-beginners) & [AI Agents](https://github.com/microsoft/ai-agents-for-beginners)  
+> 🧠 Passionate about **Artificial Intelligence** — creator of [AICompanion](https://github.com/simone-academics/hs-ai-companion-prototype) and exploring **Generative AI** and **AI Agents**  
 > 🎮 Interested in **Game Development** (Godot · LibGDX · Java Swing)  
 > 🚀 Lifelong learner, passionate about building, experimenting, and sharing  
 
-## 🛠️ Tech Stack & Tools
-
+## ⚙️ Technologies & Tools
+Languages and technologies I work with most frequently:
 <p align="center">
   <img src="https://skillicons.dev/icons?i=java,rust,python,javascript,html,css,react,vue,nodejs,docker,php,dart,flutter,godot,git&theme=dark" />
 </p>
 
 ## 🚀 Current Focus
 
-💡 *Right now, I’m focusing on:*  
-- **Artificial Intelligence** → Generative models, AI Agents, and intelligent applications  
-- **Mobile development** → Flutter apps integrating AI features  
-- Strengthening my understanding of **software design, system architecture, and cross-platform development**  
+Right now I’m focusing on building and exploring:
 
-## 📚 Academic projects Archive
-All coursework and academic projects are organized in my dedicated GitHub organization:
+- **Artificial Intelligence** → Generative AI, AI agents, and intelligent software systems  
+- **Mobile development** → Flutter applications integrating AI-powered features  
+- **Software architecture** → improving system design, modularity, and cross-platform development skills
 
-[![Academic Projects](https://img.shields.io/badge/Academic_Projects-Organization-blue?style=for-the-badge&logo=github)](https://github.com/simone-academics)
+## 📚 Academic Projects
 
-## 📫 How to Reach Me
-If you want to discuss **programming, AI, or game development**, collaborate on projects, or just share ideas, feel free to reach out!  
+All coursework and academic projects are organized in a dedicated GitHub organization:
 
-<p>
-  <a href="mailto:simonesiega1@gmail.com">
-    <img src="https://img.shields.io/badge/Email-%23D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://discordapp.com/users/697499122655035412">
-    <img src="https://img.shields.io/badge/Discord-%235865F2?style=for-the-badge&logo=discord&logoColor=white" />
-  </a>
-  <a href="https://github.com/simonesiega">
-    <img src="https://img.shields.io/badge/GitHub-%23121011?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-</p>
+[![Academic Projects](https://img.shields.io/badge/Academic_Projects-GitHub_Organization-blue?style=for-the-badge&logo=github)](https://github.com/simonesiega-academics)
+
+This organization contains projects developed during my academic journey, including experiments with AI, systems programming, and software engineering.
