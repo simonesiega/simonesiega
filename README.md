@@ -3,7 +3,7 @@
 </h1>
 
 <p>
-  Computer Science student building AI systems, backend software, and developer tools.
+  Final-year IT student building AI systems, backend software, and developer tools.
 </p>
 
 <p>
@@ -12,7 +12,7 @@
   <a href="mailto:simonesiega1@gmail.com"><strong>Email</strong></a>
 </p>
 
-<p><em>Currently building TapTune — Android companion app for instant, frictionless Spotify handoff between nearby devices.</em></p>
+<p><em>Currently building TapTune — an Android companion app for instant, frictionless Spotify handoff between nearby devices.</em></p>
 
 ```ts
 const simone = {
@@ -20,6 +20,6 @@ const simone = {
   builds: ["AI systems", "Backend software", "Developer tools"],
   currentProject: "TapTune",
   languages: ["Java", "Rust", "Python", "TypeScript"],
-  learning: ["Kotlin", "Flutter"],
+  exploring: ["Kotlin", "Flutter"],
 };
 ```
