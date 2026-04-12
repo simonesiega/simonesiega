@@ -12,13 +12,18 @@
   <a href="mailto:simonesiega1@gmail.com"><strong>Email</strong></a>
 </p>
 
-<p><em>Currently building TapTune — an Android companion app for instant, frictionless Spotify handoff between nearby devices.</em></p>
+<p>
+  <em>
+    Currently building TapTune — an Android companion app for instant, frictionless Spotify handoff between nearby devices —
+    and PromptLab, an open-source Python CLI for model-aware prompt optimization.
+  </em>
+</p>
 
 ```ts
 const simone = {
   basedIn: "Venice, Italy",
   builds: ["AI systems", "Backend software", "Developer tools"],
-  currentProject: "TapTune",
+  currentProjects: ["TapTune", "PromptLab"],
   languages: ["Java", "Rust", "Python", "TypeScript"],
   exploring: ["Kotlin", "Flutter"],
 };
