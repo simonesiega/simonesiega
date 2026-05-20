@@ -3,20 +3,13 @@
 </h1>
 
 <p>
-  Final-year IT student building AI systems, backend software, and developer tools.
-</p>
-
-<p>
   <a href="https://simonesiega.com"><strong>Portfolio</strong></a> ·
   <a href="https://www.linkedin.com/in/simonesiega"><strong>LinkedIn</strong></a> ·
   <a href="mailto:simonesiega1@gmail.com"><strong>Email</strong></a>
 </p>
 
 <p>
-  <em>
-    Currently building PromptLab — an open-source Python CLI for model-aware prompt optimization —
-    and TapTune, an Android companion app for instant Spotify handoff between nearby devices.
-  </em>
+  Final-year IT student building AI systems, backend software, and developer tools.
 </p>
 
 ```ts
