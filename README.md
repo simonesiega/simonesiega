@@ -20,7 +20,10 @@ const simone = {
     next: "Computer Engineering at the University of Padua",
   },
   builds: ["AI systems", "Backend software", "Developer tools"],
-  currentProjects: ["PromptLab", "TapTune"],
+  currentProjects: [
+    "Preparing for my high school final exam",
+    "Building a custom solution for Arsenale Moto",
+  ],
   languages: ["Python", "Rust", "TypeScript", "Kotlin", "Java"],
 };
 ```
