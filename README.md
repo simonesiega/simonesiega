@@ -8,22 +8,23 @@
   <a href="mailto:simonesiega1@gmail.com"><strong>Email</strong></a>
 </p>
 
-<p>
-  Final-year IT student building AI systems, backend software, and developer tools.
+<p> 
+  Computer Engineering student based in Venice, Italy. <br> 
+  Building backend software, production-ready websites, and developer tools while developing a growing interest in AI systems.
 </p>
 
 ```ts
 const simone = {
   basedIn: "Venice, Italy",
   education: {
-    current: "Final-year IT student at Zuccante",
-    next: "Computer Engineering at the University of Padua",
+    current: "Computer Engineering B.Sc. student at the University of Padua",
+    previous: "Technical Diploma in Computer Science, 100/100 with honors",
   },
-  builds: ["AI systems", "Backend software", "Developer tools"],
-  currentProjects: [
-    "Preparing for my high school final exam",
-    "Building a custom solution for Arsenale Moto",
+  builds: [ "Backend software", "Production-ready websites", "Developer tools"],
+  currentFocus: [
+    "Preparing for software development internship opportunities",
+    "Continuing to build websites for real clients",
   ],
-  languages: ["Python", "Rust", "TypeScript", "Kotlin", "Java"],
+  languages: ["Java", "Python", "Rust", "TypeScript", "Kotlin"],
 };
 ```
