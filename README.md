@@ -10,7 +10,7 @@
 
 <p> 
   Computer Engineering student based in Venice, Italy. <br> 
-  Building backend software, production-ready websites, and developer tools while developing a growing interest in AI systems.
+  Currently working on <a href="https://github.com/simonesiega/codex-limits"><strong>codex-limits</strong></a>: a polished CLI and agent integration for checking Codex usage limits, reset times, and reset-credit coupons.
 </p>
 
 ```ts
