@@ -5,7 +5,8 @@
 <p>
   <a href="https://simonesiega.com"><strong>Portfolio</strong></a> ·
   <a href="https://www.linkedin.com/in/simonesiega"><strong>LinkedIn</strong></a> ·
-  <a href="mailto:simonesiega1@gmail.com"><strong>Email</strong></a>
+  <a href="mailto:simonesiega1@gmail.com"><strong>Email</strong></a> ·
+  <a href="./assets/resume/resume.pdf"><strong>Resume</strong></a>
 </p>
 
 <p>
