@@ -1,0 +1,74 @@
+name: Update profile stats
+
+on:
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-stats-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Run generator tests
+        run: python -m unittest discover -s tests -p "test_*.py"
+
+      - name: Generate contribution graphic
+        env:
+          GH_LOGIN: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_profile_stats.py
+
+      - name: Verify generated changes
+        id: changes
+        shell: bash
+        run: |
+          unexpected="$(
+            git status --porcelain=v1 --untracked-files=all |
+              while IFS= read -r line; do
+                if [[ "${line:3}" != "assets/generated/contributions.svg" ]]; then
+                  printf '%s\n' "$line"
+                fi
+              done
+          )"
+
+          if [[ -n "$unexpected" ]]; then
+            echo "Unexpected files changed during generation:" >&2
+            printf '%s\n' "$unexpected" >&2
+            exit 1
+          fi
+
+          if [[ -n "$(git status --porcelain=v1 -- assets/generated/contributions.svg)" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Contribution graphic is already current."
+          fi
+
+      - name: Commit refreshed graphic
+        if: steps.changes.outputs.changed == 'true'
+        shell: bash
+        run: |
+          git add -- assets/generated/contributions.svg
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(profile): refresh contribution stats"
+          git push

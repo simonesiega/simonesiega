@@ -1,32 +1,56 @@
-<h1> 
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=2000&vCenter=true&width=700&lines=Hi%2C+I%27m+Simone+Siega+%F0%9F%91%8B" alt="Hi, I'm Simone Siega 👋" /> 
-</h1>
+<h1 align="center">Simone Siega</h1>
 
-<p>
-  <a href="https://simonesiega.com"><strong>Portfolio</strong></a> ·
-  <a href="https://www.linkedin.com/in/simonesiega"><strong>LinkedIn</strong></a> ·
-  <a href="mailto:simonesiega1@gmail.com"><strong>Email</strong></a> ·
-  <a href="./assets/resume/resume.pdf"><strong>Resume</strong></a>
+<p align="center">
+  <strong>Computer Engineering student building developer tools, production applications, and open resources for students.</strong>
 </p>
 
-<p>
-  Currently building
-  <a href="https://github.com/simonesiega/codex-limits"><strong>codex-limits</strong></a>
-  and maintaining
-  <a href="https://github.com/simonesiega/european-tech-opportunities-2027"><strong>European Tech Opportunities 2027</strong></a>.
-  I am also preparing for software engineering internships by studying algorithms
-  and data structures and documenting my progress in
-  <a href="https://github.com/simonesiega/leetcode-solutions"><strong>LeetCode Solutions</strong></a>.
+<p align="center"><samp>VENICE, ITALY · UNIVERSITY OF PADUA</samp></p>
+
+<p align="center">
+  <a href="https://simonesiega.com">Portfolio</a> ·
+  <a href="https://www.linkedin.com/in/simonesiega">LinkedIn</a> ·
+  <a href="mailto:simonesiega1@gmail.com">Email</a> ·
+  <a href="./assets/resume/resume.pdf">Resume</a>
 </p>
 
-```ts
-const simone = {
-  basedIn: "Venice, Italy",
-  education: {
-    current: "Computer Engineering B.Sc. student at the University of Padua",
-    previous: "Technical Diploma in Computer Science, 100/100 with honors",
-  },
-  builds: ["Backend software", "Production-ready websites", "Developer tools"],
-  languages: ["Java", "Python", "Rust", "TypeScript", "Kotlin"],
-};
-```
+<p align="center">
+  <img src="./assets/generated/contributions.svg" alt="GitHub contribution summary for the previous 365 complete UTC days" width="100%" />
+</p>
+
+## About
+
+First year computer Engineering B.Sc. student at the [University of Padua](https://www.unipd.it/), based in Venice, Italy. I focus on backend systems, developer tools, and reliable software built for real use.
+
+## Software & Developer Tools
+
+**[codex-limits](https://github.com/simonesiega/codex-limits)** — <samp>TypeScript · Bun · Terminal UI · CLI/JSON · npm</samp>
+
+A cross-platform CLI and terminal dashboard for inspecting OpenAI Codex usage limits, reset times, and reset-credit coupons. It provides scriptable output, integrations for coding agents, and safety-conscious handling of credentials and private data. Available on [npm](https://www.npmjs.com/package/@simonesiega/codex-limits).
+
+**[portfolio](https://github.com/simonesiega/portfolio)** — <samp>Next.js · TypeScript · Tailwind CSS · Docker</samp>
+
+The production source for [simonesiega.com](https://simonesiega.com), where I present my software projects and client work. Built with Next.js and TypeScript and deployed as a containerized application.
+
+**[cfg-parser](https://github.com/simonesiega/cfg-parser)** — <samp>Rust · Formal grammar · CLI</samp>
+
+A Rust command-line parser and evaluator for arithmetic expressions defined by a context-free grammar. It supports operator precedence, implicit multiplication, exponentiation, n-th roots, and structured syntax and mathematical errors.
+
+## Resources for Students
+
+**[European Tech Opportunities 2027](https://github.com/simonesiega/european-tech-opportunities-2027)** — <samp>Python · Next.js · TypeScript · SQLite · Docker · GitHub Actions</samp>
+
+An open-source data pipeline and [searchable directory](https://opportunities2027.simonesiega.com) for technology internships and new-graduate roles across Europe. A scheduled Python pipeline applies conservative filtering and publishes verified opportunities through a Next.js interface.
+
+**[LeetCode Solutions](https://github.com/simonesiega/leetcode-solutions)** — <samp>Python · Data Structures · Algorithms</samp>
+
+A structured Python workspace for studying data structures, algorithms, and technical interview patterns. Solutions follow a <samp>roadmap → topic → problem</samp> hierarchy for focused review and comparison.
+
+**[UNIPD Computer Engineering](https://github.com/simonesiega/unipd-computer-engineering)** — <samp>LaTeX · Academic archive</samp>
+
+A structured archive of notes and course materials from the Computer Engineering B.Sc. at the University of Padua, organized by academic year and course.
+
+---
+
+<p align="center">
+  Open to software engineering internships, collaborations, and selected freelance work.
+</p>
