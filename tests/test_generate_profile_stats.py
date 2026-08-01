@@ -212,7 +212,6 @@ class SvgTests(unittest.TestCase):
             "CONTRIBUTION LEDGER",
             "WEEKLY CONTRIBUTION SIGNAL",
             "CALENDAR WEEKS",
-            "stroke-dasharray",
             "<circle",
             "<polygon",
             "<polyline",
@@ -220,6 +219,26 @@ class SvgTests(unittest.TestCase):
             self.assertNotIn(clutter, svg)
         self.assertEqual(svg.count("<line "), 1)
         self.assertEqual(svg.count("font-size:"), 3)
+
+    def test_animation_reveals_stats_months_then_draws_graph(self) -> None:
+        svg = profile_stats.render_svg(
+            profile_stats.calculate_stats(self.days),
+            login="example",
+            start=self.start,
+            end=self.end,
+        )
+
+        self.assertLess(svg.index("stat-1"), svg.index("stat-2"))
+        self.assertLess(svg.index("stat-2"), svg.index("stat-3"))
+        self.assertIn("animation-delay: 1080ms", svg)
+        self.assertIn("animation-delay: 2020ms", svg)
+        self.assertIn(
+            "animation: graph-sweep 3000ms cubic-bezier(.4, 0, .2, 1) 2500ms",
+            svg,
+        )
+        self.assertNotIn('pathLength="1"', svg)
+        self.assertNotIn("stroke-dasharray", svg)
+        self.assertIn("prefers-reduced-motion: reduce", svg)
 
     def test_month_labels_are_spaced_every_three_months(self) -> None:
         markers = profile_stats._quarterly_month_markers(
@@ -244,7 +263,7 @@ class SvgTests(unittest.TestCase):
             end=date(2026, 7, 30),
         )
         root = ET.fromstring(svg)
-        month_nodes = root.findall("{http://www.w3.org/2000/svg}text")[-5:]
+        month_nodes = root.findall(".//{http://www.w3.org/2000/svg}text")[-5:]
         self.assertEqual(
             [node.text for node in month_nodes], ["Aug", "Nov", "Feb", "May", "Aug"]
         )

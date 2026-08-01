@@ -392,8 +392,8 @@ def render_svg(
     area_path = f"{curve_path} L 590.0 139.0 L 30.0 139.0 Z"
     month_markers = _quarterly_month_markers(start, end)
     month_labels = "\n".join(
-        f'  <text x="{_format_coordinate(30.0 + 560.0 * index / (len(month_markers) - 1))}" '
-        f'y="159" text-anchor="middle" class="secondary label">'
+        f'    <text x="{_format_coordinate(30.0 + 560.0 * index / (len(month_markers) - 1))}" '
+        f'y="159" text-anchor="middle" class="secondary label month-reveal month-{index + 1}">'
         f"{html.escape(label, quote=True)}</text>"
         for index, (_, label) in enumerate(month_markers)
     )
@@ -427,6 +427,36 @@ def render_svg(
     .total {{ font-size: 46px; font-weight: 620; letter-spacing: -1.8px; }}
     .metric {{ font-size: 23px; font-weight: 560; letter-spacing: -0.6px; }}
     .label {{ font-size: 11px; font-weight: 450; }}
+
+    /* Tell the story in order: each statistic, the timeline, then the signal. */
+    .stat-reveal {{ animation: stat-in 520ms cubic-bezier(.22, 1, .36, 1) both; }}
+    .stat-1 {{ animation-delay: 120ms; }}
+    .stat-2 {{ animation-delay: 600ms; }}
+    .stat-3 {{ animation-delay: 1080ms; }}
+    .month-reveal {{ animation: month-in 360ms ease-out both; }}
+    .month-1 {{ animation-delay: 1620ms; }}
+    .month-2 {{ animation-delay: 1720ms; }}
+    .month-3 {{ animation-delay: 1820ms; }}
+    .month-4 {{ animation-delay: 1920ms; }}
+    .month-5 {{ animation-delay: 2020ms; }}
+    .graph-clip {{
+      transform-box: fill-box;
+      transform-origin: left center;
+      animation: graph-sweep 3000ms cubic-bezier(.4, 0, .2, 1) 2500ms both;
+    }}
+
+    @keyframes stat-in {{
+      from {{ opacity: 0; transform: translateY(7px); }}
+      to {{ opacity: 1; transform: translateY(0); }}
+    }}
+    @keyframes month-in {{
+      from {{ opacity: 0; }}
+      to {{ opacity: 1; }}
+    }}
+    @keyframes graph-sweep {{
+      from {{ transform: scaleX(0); }}
+      to {{ transform: scaleX(1); }}
+    }}
     @media (prefers-color-scheme: dark) {{
       .primary {{ fill: #f5f5f5; }}
       .secondary {{ fill: #a3a3a3; }}
@@ -434,20 +464,39 @@ def render_svg(
       .trend {{ stroke: #d4d4d4; }}
       .trend-fill {{ fill: #d4d4d4; opacity: 0.07; }}
     }}
+    @media (prefers-reduced-motion: reduce) {{
+      .stat-reveal, .month-reveal, .graph-clip {{ animation: none; }}
+    }}
   </style>
 
-  <text x="30" y="59" class="primary total">{stats.total:,}</text>
-  <text x="30" y="78" class="secondary label">contributions in the last year</text>
+  <defs>
+    <clipPath id="graph-reveal" clipPathUnits="userSpaceOnUse">
+      <rect x="29" y="85" width="562" height="56" class="graph-clip" />
+    </clipPath>
+  </defs>
 
-  <text x="454" y="51" text-anchor="middle" class="primary metric">{stats.active_days:,}</text>
-  <text x="454" y="72" text-anchor="middle" class="secondary label">active days</text>
-  <text x="554" y="51" text-anchor="middle" class="primary metric">{stats.best_week:,}</text>
-  <text x="554" y="72" text-anchor="middle" class="secondary label">best week</text>
+  <g class="stat-reveal stat-1">
+    <text x="30" y="59" class="primary total">{stats.total:,}</text>
+    <text x="30" y="78" class="secondary label">contributions in the last year</text>
+  </g>
 
-  <line x1="30" y1="139" x2="590" y2="139" class="baseline" vector-effect="non-scaling-stroke" />
-  <path d="{area_path}" class="trend-fill" />
-  <path d="{curve_path}" class="trend" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" />
+  <g class="stat-reveal stat-2">
+    <text x="454" y="51" text-anchor="middle" class="primary metric">{stats.active_days:,}</text>
+    <text x="454" y="72" text-anchor="middle" class="secondary label">active days</text>
+  </g>
+  <g class="stat-reveal stat-3">
+    <text x="554" y="51" text-anchor="middle" class="primary metric">{stats.best_week:,}</text>
+    <text x="554" y="72" text-anchor="middle" class="secondary label">best week</text>
+  </g>
+
+  <g class="months">
 {month_labels}
+  </g>
+  <g clip-path="url(#graph-reveal)">
+    <line x1="30" y1="139" x2="590" y2="139" class="baseline" vector-effect="non-scaling-stroke" />
+    <path d="{area_path}" class="trend-fill" />
+    <path d="{curve_path}" class="trend" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" />
+  </g>
 </svg>
 """
 
