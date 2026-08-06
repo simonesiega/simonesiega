@@ -44,23 +44,13 @@
     </clipPath>
   </defs>
 
-<<<<<<< Updated upstream
-  <g class="stat-reveal stat-1">
+  <g>
     <text x="30" y="59" class="primary total">839</text>
     <text x="30" y="78" class="secondary label">contributions in the last year</text>
   </g>
 
-  <g class="stat-reveal stat-2">
+  <g>
     <text x="454" y="51" text-anchor="middle" class="primary metric">164</text>
-=======
-  <g>
-    <text x="30" y="59" class="primary total">808</text>
-    <text x="30" y="78" class="secondary label">contributions in the last year</text>
-  </g>
-
-  <g>
-    <text x="454" y="51" text-anchor="middle" class="primary metric">159</text>
->>>>>>> Stashed changes
     <text x="454" y="72" text-anchor="middle" class="secondary label">active days</text>
   </g>
   <g>
@@ -69,19 +59,11 @@
   </g>
 
   <g class="months">
-<<<<<<< Updated upstream
-    <text x="30.0" y="159" text-anchor="middle" class="secondary label month-reveal month-1">Sep</text>
-    <text x="170.0" y="159" text-anchor="middle" class="secondary label month-reveal month-2">Dec</text>
-    <text x="310.0" y="159" text-anchor="middle" class="secondary label month-reveal month-3">Mar</text>
-    <text x="450.0" y="159" text-anchor="middle" class="secondary label month-reveal month-4">Jun</text>
-    <text x="590.0" y="159" text-anchor="middle" class="secondary label month-reveal month-5">Sep</text>
-=======
-    <text x="30.0" y="159" text-anchor="middle" class="secondary label">Aug</text>
-    <text x="170.0" y="159" text-anchor="middle" class="secondary label">Nov</text>
-    <text x="310.0" y="159" text-anchor="middle" class="secondary label">Feb</text>
-    <text x="450.0" y="159" text-anchor="middle" class="secondary label">May</text>
-    <text x="590.0" y="159" text-anchor="middle" class="secondary label">Aug</text>
->>>>>>> Stashed changes
+    <text x="30.0" y="159" text-anchor="middle" class="secondary label">Sep</text>
+    <text x="170.0" y="159" text-anchor="middle" class="secondary label">Dec</text>
+    <text x="310.0" y="159" text-anchor="middle" class="secondary label">Mar</text>
+    <text x="450.0" y="159" text-anchor="middle" class="secondary label">Jun</text>
+    <text x="590.0" y="159" text-anchor="middle" class="secondary label">Sep</text>
   </g>
   <g clip-path="url(#graph-reveal)">
     <line x1="30" y1="139" x2="590" y2="139" class="baseline" vector-effect="non-scaling-stroke" />
