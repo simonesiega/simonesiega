@@ -16,31 +16,12 @@
     .metric { font-size: 23px; font-weight: 560; letter-spacing: -0.6px; }
     .label { font-size: 11px; font-weight: 450; }
 
-    /* Tell the story in order: each statistic, the timeline, then the signal. */
-    .stat-reveal { animation: stat-in 520ms cubic-bezier(.22, 1, .36, 1) both; }
-    .stat-1 { animation-delay: 120ms; }
-    .stat-2 { animation-delay: 600ms; }
-    .stat-3 { animation-delay: 1080ms; }
-    .month-reveal { animation: month-in 360ms ease-out both; }
-    .month-1 { animation-delay: 1620ms; }
-    .month-2 { animation-delay: 1720ms; }
-    .month-3 { animation-delay: 1820ms; }
-    .month-4 { animation-delay: 1920ms; }
-    .month-5 { animation-delay: 2020ms; }
     .graph-clip {
       transform-box: fill-box;
       transform-origin: left center;
-      animation: graph-sweep 3000ms cubic-bezier(.4, 0, .2, 1) 2500ms both;
+      animation: graph-sweep 2000ms cubic-bezier(.4, 0, .2, 1) both;
     }
 
-    @keyframes stat-in {
-      from { opacity: 0; transform: translateY(7px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes month-in {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
     @keyframes graph-sweep {
       from { transform: scaleX(0); }
       to { transform: scaleX(1); }
@@ -53,7 +34,7 @@
       .trend-fill { fill: #d4d4d4; opacity: 0.07; }
     }
     @media (prefers-reduced-motion: reduce) {
-      .stat-reveal, .month-reveal, .graph-clip { animation: none; }
+      .graph-clip { animation: none; }
     }
   </style>
 
@@ -63,6 +44,7 @@
     </clipPath>
   </defs>
 
+<<<<<<< Updated upstream
   <g class="stat-reveal stat-1">
     <text x="30" y="59" class="primary total">839</text>
     <text x="30" y="78" class="secondary label">contributions in the last year</text>
@@ -70,19 +52,36 @@
 
   <g class="stat-reveal stat-2">
     <text x="454" y="51" text-anchor="middle" class="primary metric">164</text>
+=======
+  <g>
+    <text x="30" y="59" class="primary total">808</text>
+    <text x="30" y="78" class="secondary label">contributions in the last year</text>
+  </g>
+
+  <g>
+    <text x="454" y="51" text-anchor="middle" class="primary metric">159</text>
+>>>>>>> Stashed changes
     <text x="454" y="72" text-anchor="middle" class="secondary label">active days</text>
   </g>
-  <g class="stat-reveal stat-3">
+  <g>
     <text x="554" y="51" text-anchor="middle" class="primary metric">102</text>
     <text x="554" y="72" text-anchor="middle" class="secondary label">best week</text>
   </g>
 
   <g class="months">
+<<<<<<< Updated upstream
     <text x="30.0" y="159" text-anchor="middle" class="secondary label month-reveal month-1">Sep</text>
     <text x="170.0" y="159" text-anchor="middle" class="secondary label month-reveal month-2">Dec</text>
     <text x="310.0" y="159" text-anchor="middle" class="secondary label month-reveal month-3">Mar</text>
     <text x="450.0" y="159" text-anchor="middle" class="secondary label month-reveal month-4">Jun</text>
     <text x="590.0" y="159" text-anchor="middle" class="secondary label month-reveal month-5">Sep</text>
+=======
+    <text x="30.0" y="159" text-anchor="middle" class="secondary label">Aug</text>
+    <text x="170.0" y="159" text-anchor="middle" class="secondary label">Nov</text>
+    <text x="310.0" y="159" text-anchor="middle" class="secondary label">Feb</text>
+    <text x="450.0" y="159" text-anchor="middle" class="secondary label">May</text>
+    <text x="590.0" y="159" text-anchor="middle" class="secondary label">Aug</text>
+>>>>>>> Stashed changes
   </g>
   <g clip-path="url(#graph-reveal)">
     <line x1="30" y1="139" x2="590" y2="139" class="baseline" vector-effect="non-scaling-stroke" />

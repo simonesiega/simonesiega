@@ -109,6 +109,12 @@ class CalendarParsingTests(unittest.TestCase):
                 payload, date(2026, 4, 1), date(2026, 4, 2)
             )
 
+    def test_invalid_date_range_is_rejected(self) -> None:
+        with self.assertRaisesRegex(ValueError, "date range is invalid"):
+            profile_stats.extract_contribution_days(
+                self._payload([]), date(2026, 4, 2), date(2026, 4, 1)
+            )
+
     def test_missing_user_fails_clearly(self) -> None:
         with self.assertRaisesRegex(
             profile_stats.ProfileStatsError, "configured GitHub user was not found"
@@ -186,10 +192,10 @@ class SvgTests(unittest.TestCase):
             end=self.end,
         )
         root = ET.fromstring(svg)
-        title = root.find("{http://www.w3.org/2000/svg}title")
+        title_text = root.findtext("{http://www.w3.org/2000/svg}title")
 
-        self.assertIsNotNone(title)
-        self.assertIn(login, title.text or "")
+        self.assertIsNotNone(title_text)
+        self.assertIn(login, title_text or "")
         self.assertIn("A&amp;B &lt;team&gt; &quot;quoted&quot;", svg)
         self.assertNotIn("A&B <team>", svg)
 
@@ -220,7 +226,7 @@ class SvgTests(unittest.TestCase):
         self.assertEqual(svg.count("<line "), 1)
         self.assertEqual(svg.count("font-size:"), 3)
 
-    def test_animation_reveals_stats_months_then_draws_graph(self) -> None:
+    def test_only_graph_animates_for_two_seconds(self) -> None:
         svg = profile_stats.render_svg(
             profile_stats.calculate_stats(self.days),
             login="example",
@@ -228,14 +234,14 @@ class SvgTests(unittest.TestCase):
             end=self.end,
         )
 
-        self.assertLess(svg.index("stat-1"), svg.index("stat-2"))
-        self.assertLess(svg.index("stat-2"), svg.index("stat-3"))
-        self.assertIn("animation-delay: 1080ms", svg)
-        self.assertIn("animation-delay: 2020ms", svg)
         self.assertIn(
-            "animation: graph-sweep 3000ms cubic-bezier(.4, 0, .2, 1) 2500ms",
+            "animation: graph-sweep 2000ms cubic-bezier(.4, 0, .2, 1) both",
             svg,
         )
+        self.assertEqual(svg.count("animation:"), 2)
+        self.assertNotIn("animation-delay", svg)
+        self.assertNotIn("stat-in", svg)
+        self.assertNotIn("month-in", svg)
         self.assertNotIn('pathLength="1"', svg)
         self.assertNotIn("stroke-dasharray", svg)
         self.assertIn("prefers-reduced-motion: reduce", svg)

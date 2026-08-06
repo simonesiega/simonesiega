@@ -179,10 +179,36 @@ def fetch_contribution_calendar(
     return _decode_graphql_response(raw)
 
 
+def _parse_contribution_day(raw_day: object) -> ContributionDay:
+    """Validate and parse one contribution day from a GraphQL response."""
+
+    if not isinstance(raw_day, dict):
+        raise ProfileStatsError("GitHub returned an invalid contribution day")
+
+    raw_date = raw_day.get("date")
+    count = raw_day.get("contributionCount")
+    if not isinstance(raw_date, str):
+        raise ProfileStatsError("GitHub returned a contribution day without a date")
+    if isinstance(count, bool) or not isinstance(count, int) or count < 0:
+        raise ProfileStatsError("GitHub returned an invalid contribution count")
+
+    try:
+        parsed_date = date.fromisoformat(raw_date)
+    except ValueError as exc:
+        raise ProfileStatsError(
+            f"GitHub returned an invalid contribution date: {raw_date}"
+        ) from exc
+
+    return ContributionDay(parsed_date, count)
+
+
 def extract_contribution_days(
     document: Mapping[str, Any], start: date, end: date
 ) -> tuple[ContributionDay, ...]:
     """Extract, filter, and strictly validate the requested daily calendar."""
+
+    if start > end:
+        raise ValueError("the contribution date range is invalid")
 
     try:
         user = document["data"]["user"]
@@ -203,50 +229,35 @@ def extract_contribution_days(
     if not isinstance(weeks, list):
         raise ProfileStatsError("GitHub returned an invalid contribution week list")
 
-    counts_by_date: dict[date, int] = {}
+    days_by_date: dict[date, ContributionDay] = {}
     for week in weeks:
         if not isinstance(week, dict) or not isinstance(
             week.get("contributionDays"), list
         ):
             raise ProfileStatsError("GitHub returned an invalid contribution week")
         for raw_day in week["contributionDays"]:
-            if not isinstance(raw_day, dict):
-                raise ProfileStatsError("GitHub returned an invalid contribution day")
-            raw_date = raw_day.get("date")
-            count = raw_day.get("contributionCount")
-            if not isinstance(raw_date, str):
-                raise ProfileStatsError(
-                    "GitHub returned a contribution day without a date"
-                )
-            if isinstance(count, bool) or not isinstance(count, int) or count < 0:
-                raise ProfileStatsError("GitHub returned an invalid contribution count")
-            try:
-                parsed_date = date.fromisoformat(raw_date)
-            except ValueError as exc:
-                raise ProfileStatsError(
-                    f"GitHub returned an invalid contribution date: {raw_date}"
-                ) from exc
+            contribution_day = _parse_contribution_day(raw_day)
 
             # Contribution calendars can include boundary cells outside the query.
-            if parsed_date < start or parsed_date > end:
+            if not start <= contribution_day.day <= end:
                 continue
-            if parsed_date in counts_by_date:
+            if contribution_day.day in days_by_date:
                 raise ProfileStatsError(
-                    f"GitHub returned duplicate data for {parsed_date.isoformat()}"
+                    f"GitHub returned duplicate data for {contribution_day.day.isoformat()}"
                 )
-            counts_by_date[parsed_date] = count
+            days_by_date[contribution_day.day] = contribution_day
 
     expected_days = (end - start).days + 1
     ordered: list[ContributionDay] = []
-    cursor = start
-    while cursor <= end:
-        if cursor not in counts_by_date:
+    for offset in range(expected_days):
+        current_day = start + timedelta(days=offset)
+        if current_day not in days_by_date:
             raise ProfileStatsError(
                 "GitHub contribution calendar is missing "
-                f"{cursor.isoformat()} (received {len(counts_by_date)} of {expected_days} dates)"
+                f"{current_day.isoformat()} "
+                f"(received {len(days_by_date)} of {expected_days} dates)"
             )
-        ordered.append(ContributionDay(cursor, counts_by_date[cursor]))
-        cursor += timedelta(days=1)
+        ordered.append(days_by_date[current_day])
 
     return tuple(ordered)
 
@@ -393,7 +404,7 @@ def render_svg(
     month_markers = _quarterly_month_markers(start, end)
     month_labels = "\n".join(
         f'    <text x="{_format_coordinate(30.0 + 560.0 * index / (len(month_markers) - 1))}" '
-        f'y="159" text-anchor="middle" class="secondary label month-reveal month-{index + 1}">'
+        f'y="159" text-anchor="middle" class="secondary label">'
         f"{html.escape(label, quote=True)}</text>"
         for index, (_, label) in enumerate(month_markers)
     )
@@ -428,31 +439,12 @@ def render_svg(
     .metric {{ font-size: 23px; font-weight: 560; letter-spacing: -0.6px; }}
     .label {{ font-size: 11px; font-weight: 450; }}
 
-    /* Tell the story in order: each statistic, the timeline, then the signal. */
-    .stat-reveal {{ animation: stat-in 520ms cubic-bezier(.22, 1, .36, 1) both; }}
-    .stat-1 {{ animation-delay: 120ms; }}
-    .stat-2 {{ animation-delay: 600ms; }}
-    .stat-3 {{ animation-delay: 1080ms; }}
-    .month-reveal {{ animation: month-in 360ms ease-out both; }}
-    .month-1 {{ animation-delay: 1620ms; }}
-    .month-2 {{ animation-delay: 1720ms; }}
-    .month-3 {{ animation-delay: 1820ms; }}
-    .month-4 {{ animation-delay: 1920ms; }}
-    .month-5 {{ animation-delay: 2020ms; }}
     .graph-clip {{
       transform-box: fill-box;
       transform-origin: left center;
-      animation: graph-sweep 3000ms cubic-bezier(.4, 0, .2, 1) 2500ms both;
+      animation: graph-sweep 2000ms cubic-bezier(.4, 0, .2, 1) both;
     }}
 
-    @keyframes stat-in {{
-      from {{ opacity: 0; transform: translateY(7px); }}
-      to {{ opacity: 1; transform: translateY(0); }}
-    }}
-    @keyframes month-in {{
-      from {{ opacity: 0; }}
-      to {{ opacity: 1; }}
-    }}
     @keyframes graph-sweep {{
       from {{ transform: scaleX(0); }}
       to {{ transform: scaleX(1); }}
@@ -465,7 +457,7 @@ def render_svg(
       .trend-fill {{ fill: #d4d4d4; opacity: 0.07; }}
     }}
     @media (prefers-reduced-motion: reduce) {{
-      .stat-reveal, .month-reveal, .graph-clip {{ animation: none; }}
+      .graph-clip {{ animation: none; }}
     }}
   </style>
 
@@ -475,16 +467,16 @@ def render_svg(
     </clipPath>
   </defs>
 
-  <g class="stat-reveal stat-1">
+  <g>
     <text x="30" y="59" class="primary total">{stats.total:,}</text>
     <text x="30" y="78" class="secondary label">contributions in the last year</text>
   </g>
 
-  <g class="stat-reveal stat-2">
+  <g>
     <text x="454" y="51" text-anchor="middle" class="primary metric">{stats.active_days:,}</text>
     <text x="454" y="72" text-anchor="middle" class="secondary label">active days</text>
   </g>
-  <g class="stat-reveal stat-3">
+  <g>
     <text x="554" y="51" text-anchor="middle" class="primary metric">{stats.best_week:,}</text>
     <text x="554" y="72" text-anchor="middle" class="secondary label">best week</text>
   </g>
