@@ -19,13 +19,13 @@
 
 ## About
 
-I am pursuing a B.Sc. in Computer Engineering at the [University of Padua](https://www.unipd.it/), with a focus on software engineering, algorithms, and computer systems.
+I’m pursuing a B.Sc. in Computer Engineering at the [University of Padua](https://www.unipd.it/), focusing on software engineering, algorithms, and computer systems.
 
-I build open-source developer tools and practical software, and I am interested in software engineering internships where I can contribute to real products and grow alongside experienced engineers.
+I build open-source developer tools and production software, with a particular interest in backend systems, developer infrastructure, and software reliability. I’m currently seeking software engineering internships where I can contribute to real products.
 
 ## Software & Developer Tools
 
-**[codex-limits](https://github.com/simonesiega/codex-limits)** — <samp>TypeScript · Bun · Terminal UI · CLI/JSON · npm</samp>
+**[codex-limits](https://github.com/simonesiega/codex-limits)** — <samp>TypeScript · Bun · Terminal UI · CLI/JSON · [npm](https://www.npmjs.com/package/@simonesiega/codex-limits)</samp>
 
 **[portfolio](https://github.com/simonesiega/portfolio)** — <samp>Next.js · TypeScript · Tailwind CSS · Docker · [Live site](https://simonesiega.com)</samp>
 
