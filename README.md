@@ -1,10 +1,10 @@
 <h1 align="center">Simone Siega</h1>
 
 <p align="center">
-  <strong>Computer Engineering student building developer tools, production software, and open resources for students.</strong>
+  <strong>Computer Engineering student building useful developer tools, technical software, and open resources for students.</strong>
 </p>
 
-<p align="center"><samp>VENICE, ITALY · UNIVERSITY OF PADUA</samp></p>
+<p align="center"><samp>VENICE, ITALY · <a href="https://www.unipd.it/">UNIVERSITY OF PADUA</a></samp></p>
 
 <p align="center">
   <a href="https://simonesiega.com">Portfolio</a> ·
@@ -17,24 +17,20 @@
   <img src="./assets/generated/contributions.svg" alt="GitHub contribution summary for the previous 365 complete UTC days" width="100%" />
 </p>
 
-## About
-
-I’m pursuing a B.Sc. in Computer Engineering at the [University of Padua](https://www.unipd.it/), focusing on software engineering, algorithms, and computer systems.
-
-I build open-source developer tools and production software, with a particular interest in backend systems, developer infrastructure, and software reliability. I’m currently seeking software engineering internships where I can contribute to real products.
-
 ## Software & Developer Tools
 
-**[codex-limits](https://github.com/simonesiega/codex-limits)** — <samp>TypeScript · Bun · Terminal UI · CLI/JSON · [npm](https://www.npmjs.com/package/@simonesiega/codex-limits)</samp>
+**[codex-limits](https://github.com/simonesiega/codex-limits)** — <samp>TypeScript · Bun · CLI/TUI · Agent Integrations · [npm](https://www.npmjs.com/package/@simonesiega/codex-limits)</samp>
+
+**[fluid-simulation](https://github.com/simonesiega/fluid-simulation)** — <samp>C++ · GPU Computing · Fluid Simulation · Real-Time Graphics</samp>
 
 **[portfolio](https://github.com/simonesiega/portfolio)** — <samp>Next.js · TypeScript · Tailwind CSS · Docker · [Live site](https://simonesiega.com)</samp>
 
-**[cfg-parser](https://github.com/simonesiega/cfg-parser)** — <samp>Rust · Formal Grammar · CLI</samp>
+**[cfg-parser](https://github.com/simonesiega/cfg-parser)** — <samp>Rust · Context-Free Grammar · Recursive Descent · CLI</samp>
 
 ## Resources for Students
 
-**[European Tech Opportunities 2027](https://github.com/simonesiega/european-tech-opportunities-2027)** — <samp>Python · Next.js · TypeScript · SQLite · Docker · GitHub Actions · [Live directory](https://opportunities2027.simonesiega.com)</samp>
+**[European Tech Opportunities 2027](https://github.com/simonesiega/european-tech-opportunities-2027)** — <samp>Python · Next.js · SQLite · Data Pipeline · GitHub Actions · [Live directory](https://opportunities2027.simonesiega.com)</samp>
 
-**[LeetCode Solutions](https://github.com/simonesiega/leetcode-solutions)** — <samp>Python · Data Structures · Algorithms</samp>
+**[LeetCode Solutions](https://github.com/simonesiega/leetcode-solutions)** — <samp>Python · Data Structures · Algorithms · Interview Preparation</samp>
 
-**[UNIPD Computer Engineering](https://github.com/simonesiega/unipd-computer-engineering)** — <samp>LaTeX · Academic Archive</samp>
+**[UNIPD Computer Engineering](https://github.com/simonesiega/unipd-computer-engineering)** — <samp>LaTeX · Computer Engineering · Course Notes</samp>
