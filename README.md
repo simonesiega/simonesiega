@@ -1,7 +1,7 @@
 <h1 align="center">Simone Siega</h1>
 
 <p align="center">
-  <strong>Computer Engineering student building useful developer tools, technical software, and open resources for students.</strong>
+  <strong>Computer Engineering student building developer tools, systems-oriented software, and open-source resources.</strong>
 </p>
 
 <p align="center"><samp>VENICE, ITALY · <a href="https://www.unipd.it/">UNIVERSITY OF PADUA</a></samp></p>
@@ -26,6 +26,10 @@
 **[portfolio](https://github.com/simonesiega/portfolio)** — <samp>Next.js · TypeScript · Tailwind CSS · Docker · [Live site](https://simonesiega.com)</samp>
 
 **[cfg-parser](https://github.com/simonesiega/cfg-parser)** — <samp>Rust · Context-Free Grammar · Recursive Descent · CLI</samp>
+
+## Open Source Contributions
+
+**[Supernova](https://github.com/mattiacerutti/supernova)** — <samp>Fast, opinionated development environment for the <a href="https://github.com/earendil-works/pi">Pi coding agent</a></samp>
 
 ## Resources for Students
 
