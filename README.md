@@ -19,7 +19,7 @@
 
 ## Software & Developer Tools
 
-**[codex-limits](https://github.com/simonesiega/codex-limits)** — <samp>TypeScript · Bun · CLI/TUI · Agent Integrations · [npm](https://www.npmjs.com/package/@simonesiega/codex-limits)</samp>
+**[codex-limits](https://github.com/simonesiega/codex-limits)** — <samp>TypeScript · Bun · CLI/TUI · Agent Integrations · [npm](https://www.npmjs.com/package/@simonesiega/codex-limits) · <!-- codex-downloads:start -->2.1K+ downloads<!-- codex-downloads:end --></samp>
 
 **[fluid-simulation](https://github.com/simonesiega/fluid-simulation)** — <samp>C++ · GPU Computing · Fluid Simulation · Real-Time Graphics</samp>
 
@@ -29,7 +29,7 @@
 
 ## Open Source Contributions
 
-**[Supernova](https://github.com/mattiacerutti/supernova)** — <samp>Fast, opinionated development environment for the <a href="https://github.com/earendil-works/pi">Pi coding agent</a></samp>
+**[Supernova](https://github.com/mattiacerutti/supernova)** — <samp>Electron · React · TypeScript · Windows · [4 merged PRs](https://github.com/mattiacerutti/supernova/pulls?q=is%3Apr+is%3Amerged+author%3Asimonesiega)</samp>
 
 ## Resources for Students
 

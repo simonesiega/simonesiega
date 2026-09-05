@@ -37,6 +37,33 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/generate_profile_stats.py
 
+      - name: Update codex-limits download count
+        shell: bash
+        run: |
+          python - <<'PY'
+          import html
+          import re
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+
+          url = "https://img.shields.io/npm/dt/@simonesiega/codex-limits?label=total%20downloads"
+          request = Request(url, headers={"User-Agent": "simonesiega-profile-stats/1.0"})
+          with urlopen(request, timeout=30) as response:
+              svg = response.read().decode("utf-8")
+          match = re.search(r"<title>total downloads: ([^<]+)</title>", svg)
+          if not match:
+              raise SystemExit("Could not read the download count from the Shields URL")
+
+          count = html.unescape(match.group(1)).upper()
+          path = Path("README.md")
+          readme = path.read_text(encoding="utf-8")
+          pattern = r"(?<=<!-- codex-downloads:start -->).*?(?=<!-- codex-downloads:end -->)"
+          updated, replacements = re.subn(pattern, f"{count}+ downloads", readme)
+          if replacements != 1:
+              raise SystemExit("Could not find a unique codex downloads marker in README.md")
+          path.write_text(updated, encoding="utf-8")
+          PY
+
       - name: Verify generated changes
         id: changes
         shell: bash
@@ -44,7 +71,7 @@ jobs:
           unexpected="$(
             git status --porcelain=v1 --untracked-files=all |
               while IFS= read -r line; do
-                if [[ "${line:3}" != "assets/generated/contributions.svg" ]]; then
+                if [[ "${line:3}" != "assets/generated/contributions.svg" && "${line:3}" != "README.md" ]]; then
                   printf '%s\n' "$line"
                 fi
               done
@@ -56,19 +83,19 @@ jobs:
             exit 1
           fi
 
-          if [[ -n "$(git status --porcelain=v1 -- assets/generated/contributions.svg)" ]]; then
+          if [[ -n "$(git status --porcelain=v1 -- assets/generated/contributions.svg README.md)" ]]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "Contribution graphic is already current."
           fi
 
-      - name: Commit refreshed graphic
+      - name: Commit refreshed profile stats
         if: steps.changes.outputs.changed == 'true'
         shell: bash
         run: |
-          git add -- assets/generated/contributions.svg
+          git add -- assets/generated/contributions.svg README.md
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(profile): refresh contribution stats"
+          git commit -m "chore(profile): refresh profile stats"
           git push
