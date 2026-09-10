@@ -19,7 +19,7 @@
 
 ## Software & Developer Tools
 
-**[codex-limits](https://github.com/simonesiega/codex-limits)** — <samp>TypeScript · Bun · CLI/TUI · Agent Integrations · [npm](https://www.npmjs.com/package/@simonesiega/codex-limits) · <!-- codex-downloads:start -->2.1K+ downloads<!-- codex-downloads:end --></samp>
+**[codex-limits](https://github.com/simonesiega/codex-limits)** — <samp>TypeScript · Bun · CLI/TUI · Agent Integrations · [OpenAI Codex discussion](https://github.com/openai/codex/discussions/44641) · [npm](https://www.npmjs.com/package/@simonesiega/codex-limits) · <!-- codex-downloads:start -->2.1K+ downloads<!-- codex-downloads:end --></samp>
 
 **[fluid-simulation](https://github.com/simonesiega/fluid-simulation)** — <samp>C++ · GPU Computing · Fluid Simulation · Real-Time Graphics</samp>
 
