@@ -19,7 +19,7 @@
 
 ## Selected Projects
 
-- **[codex-limits](https://github.com/simonesiega/codex-limits)** – Monitor OpenAI Codex usage limits, reset times, and reset credits without leaving the terminal. Cross-platform CLI/TUI with JSON automation and integrations for OpenCode, pi, and GitHub Copilot CLI. Available on [npm](https://www.npmjs.com/package/@simonesiega/codex-limits) with <!-- codex-downloads:start -->2.2K+ downloads<!-- codex-downloads:end -->.
+- **[codex-limits](https://github.com/simonesiega/codex-limits)** – Monitor OpenAI Codex usage limits, reset times, and reset credits without leaving the terminal. Cross-platform CLI/TUI with JSON automation and integrations for OpenCode, pi, and GitHub Copilot CLI. Available on [npm](https://www.npmjs.com/package/@simonesiega/codex-limits) with <!-- codex-downloads:start -->2.3K+ downloads<!-- codex-downloads:end -->.
 - **[European Tech Opportunities 2027](https://github.com/simonesiega/european-tech-opportunities-2027)** – Search validated tech internships and new-grad roles across Europe for the 2027 hiring cycle. An automated pipeline collects, classifies, and tracks listings for a [searchable public directory](https://opportunities2027.simonesiega.com).
 - **[fluid-simulation](https://github.com/simonesiega/fluid-simulation)** – Real-time interactive 2D fluid simulator in C++20, expanding from a CPU reference solver to OpenGL Compute and CUDA for reproducible backend comparisons.
 - **[cfg-parser](https://github.com/simonesiega/cfg-parser)** – Rust CLI for tokenizing, parsing, and evaluating arithmetic expressions with a hand-written recursive-descent parser, without relying on a parser generator.
