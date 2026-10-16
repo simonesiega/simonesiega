@@ -30,6 +30,6 @@
 
 ## Resources & Practice
 
-- **[UNIPD Computer Engineering](https://github.com/simonesiega/unipd-computer-engineering)** – Student-maintained LaTeX collection of lecture notes, exercises, and diagrams for Computer Engineering at the University of Padua, with reproducible builds and [published PDF snapshots](https://github.com/simonesiega/unipd-computer-engineering/releases).
+- **[UNIPD Computer Engineering](https://github.com/simonesiega/unipd-computer-engineering)** – Student-maintained LaTeX collection of lecture notes, exercises, proofs, and diagrams for Computer Engineering at the University of Padua, with reproducible builds and a [website to browse courses and read or download PDFs](https://notes.simonesiega.com/courses.html).
 - **[LeetCode Solutions](https://github.com/simonesiega/leetcode-solutions)** `ongoing` – Python solutions following the [NeetCode All roadmap](https://neetcode.io/roadmap) and company-specific interview practice, organized by topic with progress tracking, personal difficulty ratings, and complexity notes.
 
