@@ -27,6 +27,7 @@
 ## Open Source Contributions
 
 - **[Supernova](https://github.com/mattiacerutti/supernova)** – Contributed [4 merged PRs](https://github.com/mattiacerutti/supernova/pulls?q=is%3Apr+is%3Amerged+author%3Asimonesiega) to a desktop development environment built around the Pi coding agent, improving Windows title-bar controls, icons, and sidebar behavior.
+- **[XERJ Corpus Hub](https://hub.xerj.org/contributors/simonesiega)** – [European Tech Opportunities 2027](https://github.com/simonesiega/european-tech-opportunities-2027) was selected for inclusion in the AI-agent reference corpus.
 
 ## Resources & Practice
 
