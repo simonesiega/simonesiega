@@ -20,7 +20,7 @@
 ## Selected Projects
 
 - **[European Tech Opportunities 2027](https://github.com/simonesiega/european-tech-opportunities-2027)** `live · v1.0.0` – Discover tech internships and new-grad roles across Europe for the 2027 hiring cycle. An automated Python pipeline collects, classifies, and checks listings for a [public directory](https://techopportunities.eu/).
-- **[codex-limits](https://github.com/simonesiega/codex-limits)** `stable · v1.3.1` – Monitor OpenAI Codex usage limits, reset times, and reset credits from the terminal. Cross-platform CLI/TUI with JSON output for automation and integrations for OpenCode, pi, and GitHub Copilot CLI. Available on [npm](https://www.npmjs.com/package/@simonesiega/codex-limits) with <!-- codex-downloads:start -->2.9K+ downloads<!-- codex-downloads:end -->.
+- **[codex-limits](https://github.com/simonesiega/codex-limits)** `stable · v1.3.1` – Monitor OpenAI Codex usage limits, reset times, and reset credits from the terminal. Cross-platform CLI/TUI with JSON output for automation and integrations for OpenCode, pi, and GitHub Copilot CLI. Available on [npm](https://www.npmjs.com/package/@simonesiega/codex-limits) with <!-- codex-downloads:start -->3K+ downloads<!-- codex-downloads:end -->.
 - **[fluid-simulation](https://github.com/simonesiega/fluid-simulation)** `in development` – Interactive 2D fluid-simulation prototype in C++20, currently focused on CPU density and velocity fields, with OpenGL Compute and CUDA backends planned for reproducible performance comparisons.
 - **[cfg-parser](https://github.com/simonesiega/cfg-parser)** – Rust CLI for parsing and evaluating arithmetic expressions using a hand-written recursive-descent parser, supporting operator precedence, implicit multiplication, and roots.
 
