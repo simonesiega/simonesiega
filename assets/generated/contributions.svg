@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 166" role="img" aria-labelledby="contribution-title contribution-desc">
   <title id="contribution-title">simonesiega GitHub contribution summary for the last 365 complete UTC days</title>
-  <desc id="contribution-desc">1235 contributions across 223 active days from 2025-11-01 through 2026-10-31. The best Monday-anchored week had 102 contributions. Figures reflect contribution data available to the token used for generation.</desc>
+  <desc id="contribution-desc">1235 contributions across 223 active days from 2025-11-02 through 2026-11-01. The best Monday-anchored week had 102 contributions. Figures reflect contribution data available to the token used for generation.</desc>
   <style>
     text {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -59,11 +59,11 @@
   </g>
 
   <g class="months">
-    <text x="30.0" y="159" text-anchor="middle" class="secondary label">Nov</text>
-    <text x="170.0" y="159" text-anchor="middle" class="secondary label">Feb</text>
-    <text x="310.0" y="159" text-anchor="middle" class="secondary label">May</text>
-    <text x="450.0" y="159" text-anchor="middle" class="secondary label">Aug</text>
-    <text x="590.0" y="159" text-anchor="middle" class="secondary label">Nov</text>
+    <text x="30.0" y="159" text-anchor="middle" class="secondary label">Dec</text>
+    <text x="170.0" y="159" text-anchor="middle" class="secondary label">Mar</text>
+    <text x="310.0" y="159" text-anchor="middle" class="secondary label">Jun</text>
+    <text x="450.0" y="159" text-anchor="middle" class="secondary label">Sep</text>
+    <text x="590.0" y="159" text-anchor="middle" class="secondary label">Dec</text>
   </g>
   <g clip-path="url(#graph-reveal)">
     <line x1="30" y1="139" x2="590" y2="139" class="baseline" vector-effect="non-scaling-stroke" />
